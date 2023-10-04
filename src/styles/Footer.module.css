@@ -10,8 +10,9 @@
   font-family: Arial, sans-serif;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 80px;
 }
 
 .footerLinks {
