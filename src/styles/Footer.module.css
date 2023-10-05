@@ -56,3 +56,19 @@ p {
   font-size: 14px;
   font-style: italic;
 }
+
+.style-two {
+  height: 1px;
+  margin: auto;
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+  
+  border: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
