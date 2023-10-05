@@ -27,10 +27,26 @@
 }
 
 .item-quote {
-  color: white;
-  font-family: monospace;
-  font-size: xxx-large;
-  margin-top: 20px;
+  width: 50%;
+  margin-top: 40px;
+
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif; 
+  font-size: 24px; 
+  font-weight: bold;
+  padding: 10px 20px;
+
+  border-radius: 5px;
+  transform: translateX(50%) translateY(-50%);
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.item-quote:hover {
+  transform: translateX(50%) translateY(-50%) scale(1.1);
+  background-color: rgba(255, 221, 0, 0.9); 
+  color: black;
 }
 
 .banner-image {
@@ -45,7 +61,7 @@
   position: absolute;
   color: white;
   top: 40%;
-  left: -36px;
+  left: 16px;
 }
 
 .rightBtn {
@@ -53,7 +69,7 @@
   position: absolute;
   color: white;
   top: 40%;
-  right: -36px;
+  right: 16px;
 }
 
 /* Animation */
