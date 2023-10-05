@@ -1,6 +1,6 @@
 .navContainer {
   width: 90%;
-  
+
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
   display: flex;
@@ -44,6 +44,7 @@
 
 .navItem {
   margin: 0 10px;
+  display: inline-block;
 }
 
 .navItem a {
@@ -51,10 +52,25 @@
   color: white;
   font-weight: bold;
   font-family: Arial, sans-serif;
+  position: relative; 
 }
 
-.navItem a:hover {
-  text-decoration: underline;
+.navItem a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background-image: linear-gradient(90deg, white, rgb(255, 255, 255));
+  background-repeat: no-repeat;
+  background-size: 100% 2px; 
+  transition: background-size 0.3s ease, width 0.3s ease;
+}
+
+.navItem a:hover::before {
+  width: 100%; 
+  background-size: 100% 2px;
 }
 
 .authButtons {
