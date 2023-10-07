@@ -5,19 +5,29 @@ const Cards = ({ course }) => {
     return (
         <div className={styles.card}>
 
+            <div className={styles.supportText}>{course.titleSupport}</div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <img src={course.titleImageURL} alt={course.title} className={styles.cardImage} />
                 <div className={styles.cardTitle}>{course.title}</div>
+                <img src={course.titleImageURL} alt={course.title} className={styles.cardImage} />
             </div>
+
+            <div className={styles["style-two"]}> </div>
+
             <div className={styles.cardInfo}>
-                <p>{course.titleSupport}</p>
-                <p>{course.totalHour}</p>
                 <p>{course.totalProjects}</p>
+                <p>{course.totalHour}</p>
             </div>
+
             <div className={styles.cardRating}>
-                <p>{course.rating}</p>
+                <div className={styles.cardRatingWrapper}>
+                    <span>{course.rating}</span>
+                    <img
+                        src="https://files.codingninjas.in/4-8-stars-5588.png"
+                        alt="ratings" />
+                </div>
                 <p>{course.enrolledStudents}</p>
             </div>
+
         </div >
     );
 };
